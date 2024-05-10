@@ -1,0 +1,90 @@
+{
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+
+  "require" : {
+    "php": "^8.1.0",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-mysqli": "*",
+    "ext-pdo": "*",
+    "ext-zip": "*",
+    "authorizenet/authorizenet": "~1.9.6",
+    "chillerlan/php-qrcode": "^4.3",
+    "composer/semver": "^3.3",
+    "dragonmantank/cron-expression": "^3.1",
+    "erusev/parsedown": "^1.6",
+    "ezyang/htmlpurifier": "^4.13",
+    "filp/whoops": "^2.7",
+    "fzaninotto/faker": "^1.9",
+    "google/apiclient": "^2.12",
+    "guzzlehttp/guzzle": "^7.5",
+    "ifsnop/mysqldump-php": "^2.9",
+    "illuminate/cache": "^8.26",
+    "illuminate/config": "^8.26",
+    "illuminate/console": "^8.26",
+    "illuminate/container": "^8.26",
+    "illuminate/contracts": "^8.26",
+    "illuminate/database": "~8.0",
+    "illuminate/events": "^8.26",
+    "illuminate/filesystem": "^8.26",
+    "illuminate/http": "~8.0",
+    "illuminate/support": "~8.0",
+    "illuminate/translation": "^8.26",
+    "illuminate/validation": "^8.26",
+    "intervention/image": "^2.4",
+    "io-developer/php-whois": "^4.0",
+    "jenssegers/date": "^4.0",
+    "league/csv": "^9.0",
+    "league/glide": "^2.2",
+    "monolog/monolog": "^2.5",
+    "mpdf/mpdf": "^8.0",
+    "nesbot/carbon": "^2.62",
+    "openai-php/client": "^0.4.1",
+    "paypal/paypal-checkout-sdk": "^1.0",
+    "phpmailer/phpmailer": "^6.6",
+    "phpoffice/phpspreadsheet": "^1.5",
+    "picqer/php-barcode-generator": "^2.2",
+    "rakit/validation": "^1.4",
+    "rinvex/countries": "^8.1",
+    "sabre/event": "^3.0",
+    "smarty/smarty": "^4.2",
+    "spatie/ray": "^1.21",
+    "stripe/stripe-php": "^7.76",
+    "swiftmailer/swiftmailer": "^6.2",
+    "symfony/console": "^5.2",
+    "symfony/css-selector": "^5.0",
+    "symfony/dom-crawler": "^5.0",
+    "symfony/polyfill-iconv": "^1.6",
+    "symfony/polyfill-php80": "^1.22",
+    "symfony/process": "^5.2",
+    "symfony/translation": "^6.0",
+    "symfony/var-dumper": "^5.1",
+    "tightenco/collect": "^8.19",
+    "twilio/sdk": "^6.42",
+    "vonage/client": "^3.0",
+    "willdurand/email-reply-parser": "^2.8",
+    "xemlock/htmlpurifier-html5": "^0.1.11",
+    "zbateson/mail-mime-parser": "^1.1"
+  }
+  ,
+
+
+  "autoload": {
+    "psr-0": {"": "system/autoload/"},
+    "psr-4": {
+      "": "system/models/"
+    }
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true,
+    "allow-plugins": {
+      "php-http/discovery": true
+    }
+  },
+  "require-dev": {
+    "rector/rector": "^0.14.0"
+  }
+}

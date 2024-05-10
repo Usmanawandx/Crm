@@ -1,0 +1,31 @@
+#!/usr/bin/env php
+<?php
+require __DIR__.'/vendor/autoload.php';
+require __DIR__ . '/system/config.php';
+use Illuminate\Container\Container;
+use Illuminate\Events\Dispatcher;
+use Illuminate\Console\Application;
+
+const BASE_PATH = __DIR__;
+
+$container = new Container;
+$events = new Dispatcher($container);
+
+$clx = new Application($container, $events, 'Version 1');
+$clx->setName('CloudOnex Console App');
+
+// Bind a command
+
+foreach (glob(__DIR__.'/console/commands/*.php') as $file)
+{
+    require_once $file;
+    $class = basename($file, '.php');
+
+    if (class_exists($class))
+    {
+        $clx->resolve($class);
+    }
+}
+
+
+$clx->run();
